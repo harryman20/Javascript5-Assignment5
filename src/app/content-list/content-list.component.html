@@ -1,0 +1,5 @@
+<input [(ngModel)]="typeCheck"> <button (click)="clickEvent()">Click me for an update!</button>
+<p>
+  <app-content-card *ngFor="let item of (content1 | defaultType:'news') ; index as i; last as e" [stuff]="item" [index]="i" [last]="e" [type]="'news'"></app-content-card>
+  <app-content-card *ngFor="let item of (content1 | defaultType:'story') ; index as i; last as e" [stuff]="item" [index]="i" [last]="e" [type]="'story'"></app-content-card>
+</p>
